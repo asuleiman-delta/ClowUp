@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:96px;}
+body{margin:0;background:#0A1628;color:#fff;font-family:'Manrope',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;}
+::selection{background:rgba(201,147,10,.35);}
+@media(max-width:920px){ [data-detail-grid]{grid-template-columns:1fr !important;} [data-detail-panel]{position:static !important;} }
+</style>
+</helmet>
+<dc-import name="ClowUpNav" active="sorteos" hint-size="100%,76px"></dc-import>
+
+<main style="padding-top:104px;">
+  <div style="max-width:1200px;margin:0 auto;padding:18px 24px 6px;font-size:13.5px;color:#7C8BA1;display:flex;align-items:center;gap:9px;flex-wrap:wrap;">
+    <a href="Index.dc.html" style="color:#7C8BA1;transition:color .2s;" style-hover="color:#fff;">Inicio</a>
+    <span style="color:#3C4A60;">/</span>
+    <a href="Sorteos.dc.html" style="color:#7C8BA1;transition:color .2s;" style-hover="color:#fff;">Sorteos</a>
+    <span style="color:#3C4A60;">/</span>
+    <span style="color:#E6C77A;">iPhone 15 Pro Max</span>
+  </div>
+
+  <section style="max-width:1200px;margin:0 auto;padding:18px 24px clamp(40px,5vw,64px);">
+    <div data-detail-grid="" style="display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,4vw,52px);align-items:start;">
+
+      <!-- LEFT: gallery + description -->
+      <div>
+        <div style="position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(201,147,10,.28);box-shadow:0 24px 60px rgba(0,0,0,.45);">
+          <img id="cu-main-img" src="assets/sorteo-iphone.jpg" alt="iPhone 15 Pro Max 256GB" style="width:100%;height:clamp(320px,42vw,470px);object-fit:cover;display:block;">
+          <span style="position:absolute;top:16px;left:16px;background:rgba(201,147,10,.18);border:1px solid rgba(201,147,10,.45);color:#E6C77A;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);">Tech · Premio destacado</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px;">
+          <div style="border-radius:14px;overflow:hidden;border:2px solid rgba(201,147,10,.6);height:84px;"><img src="assets/sorteo-iphone.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="border-radius:14px;height:84px;border:1px solid rgba(255,255,255,.1);background:repeating-linear-gradient(135deg,#13243f 0 10px,#0f1d34 10px 20px);display:flex;align-items:center;justify-content:center;"><span style="font-family:'Sora',monospace;font-size:10px;letter-spacing:.04em;color:#5C6E8A;">vista 2</span></div>
+          <div style="border-radius:14px;height:84px;border:1px solid rgba(255,255,255,.1);background:repeating-linear-gradient(135deg,#13243f 0 10px,#0f1d34 10px 20px);display:flex;align-items:center;justify-content:center;"><span style="font-family:'Sora',monospace;font-size:10px;letter-spacing:.04em;color:#5C6E8A;">vista 3</span></div>
+        </div>
+
+        <div style="margin-top:40px;">
+          <h2 style="font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(22px,2.6vw,28px);margin:0 0 14px;letter-spacing:-.01em;">Sobre el premio</h2>
+          <p style="font-size:16px;line-height:1.7;color:#A0AEC0;margin:0 0 20px;text-wrap:pretty;">El iPhone 15 Pro Max en titanio, con 256GB de almacenamiento y el chip A17 Pro. Nuevo, sellado y con garantía oficial. El ganador lo recibe sin costo de envío en cualquier país donde ClowUp tiene presencia.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span style="font-size:13px;font-weight:600;color:#C9D4E3;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:8px 14px;border-radius:999px;">256 GB</span>
+            <span style="font-size:13px;font-weight:600;color:#C9D4E3;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:8px 14px;border-radius:999px;">Titanio Natural</span>
+            <span style="font-size:13px;font-weight:600;color:#C9D4E3;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:8px 14px;border-radius:999px;">Cámara 48 MP</span>
+            <span style="font-size:13px;font-weight:600;color:#C9D4E3;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:8px 14px;border-radius:999px;">Garantía oficial</span>
+            <span style="font-size:13px;font-weight:600;color:#C9D4E3;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:8px 14px;border-radius:999px;">Nuevo y sellado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: purchase panel -->
+      <div data-detail-panel="" style="position:sticky;top:96px;background:#0F1E33;border:1px solid rgba(201,147,10,.32);border-radius:22px;padding:clamp(24px,3vw,32px);box-shadow:0 22px 50px rgba(0,0,0,.4);">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(123,211,137,.1);border:1px solid rgba(123,211,137,.35);padding:5px 12px;border-radius:999px;margin-bottom:16px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#7BD389;"></span>
+          <span style="font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FE0AB;">Sorteo activo</span>
+        </div>
+        <h1 style="font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(24px,3vw,32px);line-height:1.12;letter-spacing:-.02em;margin:0 0 6px;">iPhone 15 Pro Max</h1>
+        <div style="font-size:14.5px;color:#7C8BA1;margin-bottom:22px;">Sorteo mensual · se transmite en vivo</div>
+
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7C8BA1;margin-bottom:10px;">Cierra en</div>
+        <div data-countdown="{{ t1 }}" style="display:flex;gap:8px;margin-bottom:22px;">
+          <div style="flex:1;text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:11px 4px;"><div data-u="d" style="font-family:'Sora',sans-serif;font-weight:800;font-size:23px;">00</div><div style="font-size:10.5px;color:#7C8BA1;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">días</div></div>
+          <div style="flex:1;text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:11px 4px;"><div data-u="h" style="font-family:'Sora',sans-serif;font-weight:800;font-size:23px;">00</div><div style="font-size:10.5px;color:#7C8BA1;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">hrs</div></div>
+          <div style="flex:1;text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:11px 4px;"><div data-u="m" style="font-family:'Sora',sans-serif;font-weight:800;font-size:23px;">00</div><div style="font-size:10.5px;color:#7C8BA1;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">min</div></div>
+          <div style="flex:1;text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:11px 4px;"><div data-u="s" style="font-family:'Sora',sans-serif;font-weight:800;font-size:23px;color:#C9930A;">00</div><div style="font-size:10.5px;color:#7C8BA1;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">seg</div></div>
+        </div>
+
+        <div style="margin-bottom:22px;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px;"><span style="color:#A0AEC0;font-weight:600;">Tickets asignados</span><span style="color:#E6C77A;font-weight:700;">1.840 / 2.500</span></div>
+          <div style="height:9px;border-radius:999px;background:rgba(255,255,255,.07);overflow:hidden;"><div style="width:73.6%;height:100%;border-radius:999px;background:linear-gradient(90deg,#C9930A,#F0C24B);"></div></div>
+        </div>
+
+        <div style="background:rgba(43,142,240,.07);border:1px solid rgba(43,142,240,.28);border-radius:14px;padding:16px 18px;margin-bottom:20px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;">
+            <span style="font-size:13px;font-weight:700;color:#8FC2F5;">Tus números en este sorteo</span>
+            <span style="font-size:11px;color:#7C8BA1;">incluidos en tu plan</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:6px 13px;border-radius:9px;">#0045</span>
+            <span style="font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:6px 13px;border-radius:9px;">#1920</span>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:20px;">
+          <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:16px;margin-bottom:4px;">¿Quieres más chances?</div>
+          <div style="font-size:13.5px;color:#7C8BA1;margin-bottom:16px;">Suma tickets adicionales para este sorteo. Cada ticket es un número más para ganar.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;">
+            <div style="display:flex;align-items:center;gap:0;border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden;">
+              <button onClick="{{ dec }}" aria-label="Quitar ticket" style="width:46px;height:46px;background:rgba(255,255,255,.04);border:0;color:#fff;font-size:22px;cursor:pointer;font-family:'Sora',sans-serif;transition:background .2s;" style-hover="background:rgba(201,147,10,.18);">−</button>
+              <div style="width:54px;text-align:center;font-family:'Sora',sans-serif;font-weight:800;font-size:20px;font-variant-numeric:tabular-nums;">{{ qty }}</div>
+              <button onClick="{{ inc }}" aria-label="Agregar ticket" style="width:46px;height:46px;background:rgba(255,255,255,.04);border:0;color:#fff;font-size:22px;cursor:pointer;font-family:'Sora',sans-serif;transition:background .2s;" style-hover="background:rgba(201,147,10,.18);">+</button>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:12px;color:#7C8BA1;">Total</div>
+              <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:#E6C77A;">{{ total }}</div>
+            </div>
+          </div>
+          <a href="Planes.dc.html" style="display:block;text-align:center;background:linear-gradient(135deg,#E8B53A,#C9930A);color:#0A1628;font-family:'Sora',sans-serif;font-weight:800;font-size:16px;padding:16px;border-radius:13px;box-shadow:0 12px 30px rgba(201,147,10,.35);transition:transform .2s,filter .2s;" style-hover="transform:translateY(-2px);filter:brightness(1.08);">Comprar tickets extra</a>
+          <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;font-size:12px;color:#7C8BA1;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7BD389" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.2l2.4 2.4 4.6-4.8"></path></svg>
+            <span>Ganador elegido con RNG auditado y verificable</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CÓMO PARTICIPAR -->
+  <section style="padding:clamp(48px,6vw,80px) 24px;background:linear-gradient(180deg,#0A1628,#0b1a30);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <h2 style="font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin:0 0 40px;text-align:center;">Cómo participar</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;">
+        <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:32px 28px;">
+          <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:15px;color:#0A1628;background:linear-gradient(135deg,#E8B53A,#C9930A);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">1</div>
+          <h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;">Activa tu membresía</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:#A0AEC0;margin:0;">Con tu plan mensual quedas habilitado para todos los sorteos del mes.</p>
+        </div>
+        <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:32px 28px;">
+          <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:15px;color:#0A1628;background:linear-gradient(135deg,#E8B53A,#C9930A);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">2</div>
+          <h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;">Recibe tus números</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:#A0AEC0;margin:0;">Te asignamos tickets únicos automáticamente. Súmale tickets extra si quieres más chances.</p>
+        </div>
+        <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:32px 28px;">
+          <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:15px;color:#0A1628;background:linear-gradient(135deg,#E8B53A,#C9930A);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">3</div>
+          <h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;">Sigue el sorteo en vivo</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:#A0AEC0;margin:0;">El ganador se elige en transmisión en vivo con sistema aleatorio auditado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BASES -->
+  <section style="padding:clamp(48px,6vw,80px) 24px;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2B8EF0;margin-bottom:14px;">Transparencia</div>
+      <h2 style="font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin:0 0 28px;">Bases del sorteo</h2>
+      <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;gap:18px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polygon points="12,3 21,12 12,21 3,12"></polygon></svg><p style="font-size:15px;line-height:1.6;color:#C9D4E3;margin:0;">Participan todos los suscriptores con membresía activa al momento del cierre del sorteo.</p></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polygon points="12,3 21,12 12,21 3,12"></polygon></svg><p style="font-size:15px;line-height:1.6;color:#C9D4E3;margin:0;">El ganador se determina mediante un sistema de selección aleatoria (RNG) auditado y verificable, durante la transmisión en vivo.</p></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polygon points="12,3 21,12 12,21 3,12"></polygon></svg><p style="font-size:15px;line-height:1.6;color:#C9D4E3;margin:0;">Solo pueden participar personas mayores de 18 años con su identidad verificada en el registro.</p></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polygon points="12,3 21,12 12,21 3,12"></polygon></svg><p style="font-size:15px;line-height:1.6;color:#C9D4E3;margin:0;">El premio se entrega sin costo para el ganador y se notifica por correo y WhatsApp dentro de las 48 horas siguientes.</p></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polygon points="12,3 21,12 12,21 3,12"></polygon></svg><p style="font-size:15px;line-height:1.6;color:#C9D4E3;margin:0;">Los tickets adicionales no son reembolsables una vez realizado el sorteo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTROS SORTEOS -->
+  <section style="padding:0 24px clamp(56px,7vw,88px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;">
+        <h2 style="font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-.02em;margin:0;">Otros sorteos activos</h2>
+        <a href="Sorteos.dc.html" style="font-weight:700;font-size:14.5px;color:#2B8EF0;display:inline-flex;align-items:center;gap:6px;transition:gap .2s;" style-hover="gap:11px;">Ver todos →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+        <a href="Detalle de Sorteo.dc.html" style="display:block;background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;" style-hover="transform:translateY(-6px);border-color:rgba(201,147,10,.5);box-shadow:0 18px 40px rgba(0,0,0,.4);">
+          <div style="height:200px;overflow:hidden;"><img src="assets/sorteo-ps5.jpg" alt="PlayStation 5 Slim" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="padding:20px 22px;"><div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8FC2F5;margin-bottom:8px;">Gaming</div><h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0;">PlayStation 5 Slim Bundle</h3></div>
+        </a>
+        <a href="Detalle de Sorteo.dc.html" style="display:block;background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;" style-hover="transform:translateY(-6px);border-color:rgba(201,147,10,.5);box-shadow:0 18px 40px rgba(0,0,0,.4);">
+          <div style="height:200px;overflow:hidden;"><img src="assets/sorteo-millon.jpg" alt="1 millón de pesos" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="padding:20px 22px;"><div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FE0AB;margin-bottom:8px;">Efectivo</div><h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0;">$1.000.000 directo a tu cuenta</h3></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dc-import name="ClowUpFooter" hint-size="100%,420px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1280, &quot;height&quot;: 720 }
+}">
+class Component extends DCLogic {
+  state = { qty: 1 };
+  PRICE = 4990;
+
+  componentDidMount() {
+    const pad = (n) => String(n).padStart(2, '0');
+    this.tick = () => {
+      const el = document.querySelector('[data-countdown]');
+      if (!el) return;
+      const t = parseInt(el.getAttribute('data-countdown'), 10);
+      if (!t) return;
+      let diff = t - Date.now();
+      if (diff < 0) diff = 0;
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      const set = (u, v) => { const n = el.querySelector('[data-u="' + u + '"]'); if (n) n.textContent = pad(v); };
+      set('d', d); set('h', h); set('m', m); set('s', s);
+    };
+    this.tick();
+    this.iv = setInterval(this.tick, 1000);
+  }
+
+  componentWillUnmount() { clearInterval(this.iv); }
+
+  fmt(n) { return '$' + n.toLocaleString('es-CL'); }
+
+  renderVals() {
+    const base = Date.now();
+    return {
+      t1: base + 4 * 86400000 + 7 * 3600000 + 22 * 60000,
+      qty: this.state.qty,
+      total: this.fmt(this.state.qty * this.PRICE),
+      inc: () => this.setState((s) => ({ qty: Math.min(50, s.qty + 1) })),
+      dec: () => this.setState((s) => ({ qty: Math.max(1, s.qty - 1) })),
+    };
+  }
+}
+</script>
+</body>
+</html>

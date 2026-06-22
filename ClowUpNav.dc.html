@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+[data-cu-nav] a{text-decoration:none;}
+@media(max-width:880px){
+ [data-nav-links]{display:none !important;}
+ [data-nav-cta]{display:none !important;}
+ [data-hamburger]{display:flex !important;}
+}
+@media(min-width:881px){
+ [data-mobile-menu]{display:none !important;}
+}
+</style>
+</helmet>
+<div data-cu-nav="">
+<nav id="cu-nav" style="position:fixed;top:0;left:0;width:100%;z-index:100;border-bottom:1px solid rgba(255,255,255,.06);transition:background .35s ease,box-shadow .35s ease,border-color .35s ease;font-family:'Manrope',system-ui,sans-serif;">
+  <div style="max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <a href="Index.dc.html" style="display:flex;align-items:center;flex-shrink:0;">
+      <img src="assets/logo-full.png" alt="ClowUp" style="height:38px;width:auto;display:block;">
+    </a>
+    <div data-nav-links="" style="display:flex;align-items:center;gap:34px;">
+      <a data-key="inicio" href="Index.dc.html" style="font-size:15px;font-weight:600;color:#A0AEC0;transition:color .2s;" style-hover="color:#fff;">Inicio</a>
+      <a data-key="sorteos" href="Sorteos.dc.html" style="font-size:15px;font-weight:600;color:#A0AEC0;transition:color .2s;" style-hover="color:#fff;">Sorteos</a>
+      <a data-key="ganadores" href="Ganadores.dc.html" style="font-size:15px;font-weight:600;color:#A0AEC0;transition:color .2s;" style-hover="color:#fff;">Ganadores</a>
+      <a data-key="planes" href="Planes.dc.html" style="font-size:15px;font-weight:600;color:#A0AEC0;transition:color .2s;" style-hover="color:#fff;">Planes</a>
+      <a data-key="contacto" href="Contacto.dc.html" style="font-size:15px;font-weight:600;color:#A0AEC0;transition:color .2s;" style-hover="color:#fff;">Contacto</a>
+    </div>
+    <a data-nav-cta="" href="Planes.dc.html" style="flex-shrink:0;background:linear-gradient(135deg,#E8B53A,#C9930A);color:#0A1628;font-family:'Sora',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:.01em;padding:11px 22px;border-radius:10px;box-shadow:0 6px 22px rgba(201,147,10,.32);transition:transform .2s,box-shadow .2s,filter .2s;" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,147,10,.5);filter:brightness(1.08);">{{ ctaLabel }}</a>
+    <button data-hamburger="" onClick="{{ toggleMenu }}" aria-label="Menú" style="display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;">
+      <span style="width:24px;height:2px;background:#fff;border-radius:2px;"></span>
+      <span style="width:24px;height:2px;background:#fff;border-radius:2px;"></span>
+      <span style="width:24px;height:2px;background:#fff;border-radius:2px;"></span>
+    </button>
+  </div>
+</nav>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div data-mobile-menu="" style="position:fixed;inset:0;z-index:99;background:rgba(8,18,34,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;flex-direction:column;padding:104px 32px 32px;gap:8px;font-family:'Manrope',sans-serif;">
+  <a href="Index.dc.html" style="font-family:'Sora',sans-serif;font-weight:700;font-size:28px;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);">Inicio</a>
+  <a href="Sorteos.dc.html" style="font-family:'Sora',sans-serif;font-weight:700;font-size:28px;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);">Sorteos</a>
+  <a href="Ganadores.dc.html" style="font-family:'Sora',sans-serif;font-weight:700;font-size:28px;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);">Ganadores</a>
+  <a href="Planes.dc.html" style="font-family:'Sora',sans-serif;font-weight:700;font-size:28px;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);">Planes</a>
+  <a href="Contacto.dc.html" style="font-family:'Sora',sans-serif;font-weight:700;font-size:28px;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);">Contacto</a>
+  <a href="Planes.dc.html" style="margin-top:20px;text-align:center;background:linear-gradient(135deg,#E8B53A,#C9930A);color:#0A1628;font-family:'Sora',sans-serif;font-weight:700;font-size:18px;letter-spacing:.01em;padding:16px;border-radius:12px;">{{ ctaLabel }}</a>
+</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1200, &quot;height&quot;: 80 },
+  &quot;active&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;&quot;, &quot;sorteos&quot;, &quot;beneficios&quot;, &quot;ganadores&quot;, &quot;planes&quot;, &quot;contacto&quot;], &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;ctaLabel&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Quiero ser miembro&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  state = { menuOpen: false };
+
+  componentDidMount() {
+    this.applyActive();
+    this.onScroll = () => {
+      const nav = document.getElementById('cu-nav');
+      if (!nav) return;
+      if (window.scrollY > 24) {
+        nav.style.background = 'rgba(9,18,34,.82)';
+        nav.style.backdropFilter = 'blur(16px)';
+        nav.style.webkitBackdropFilter = 'blur(16px)';
+        nav.style.borderBottomColor = 'rgba(201,147,10,.16)';
+        nav.style.boxShadow = '0 12px 34px rgba(0,0,0,.38)';
+      } else {
+        nav.style.background = 'transparent';
+        nav.style.backdropFilter = 'none';
+        nav.style.webkitBackdropFilter = 'none';
+        nav.style.borderBottomColor = 'rgba(255,255,255,.06)';
+        nav.style.boxShadow = 'none';
+      }
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  applyActive() {
+    const key = this.props.active || '';
+    document.querySelectorAll('[data-cu-nav] [data-key]').forEach((a) => {
+      if (a.getAttribute('data-key') === key) {
+        a.style.color = '#fff';
+        a.style.fontWeight = '700';
+      }
+    });
+  }
+
+  componentDidUpdate() { this.applyActive(); }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      ctaLabel: this.props.ctaLabel ?? 'Quiero ser miembro',
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+    };
+  }
+}
+</script>
+</body>
+</html>

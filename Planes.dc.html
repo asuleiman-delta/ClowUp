@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:96px;}
+body{margin:0;background:#0A1628;color:#fff;font-family:'Manrope',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;}
+::selection{background:rgba(201,147,10,.35);}
+@keyframes cuTwinkle{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}
+@media(max-width:900px){ [data-plan-grid]{grid-template-columns:1fr !important;} }
+@media(max-width:640px){ [data-cmp] [data-cmp-row]{font-size:13px !important;} }
+</style>
+</helmet>
+<dc-import name="ClowUpNav" active="planes" hint-size="100%,76px"></dc-import>
+
+<dc-import name="ClowUpHero" eyebrow="Membresía" title="Una membresía. Mil oportunidades." subtitle="Un solo plan, todo incluido. Sorteos cada mes, beneficios reales y la opción de sumar chances cuando quieras." hint-size="100%,360px"></dc-import>
+
+<!-- BILLING TOGGLE + PLAN -->
+<section style="padding:8px 24px clamp(48px,6vw,72px);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:flex;justify-content:center;margin-bottom:36px;">
+      <div style="display:inline-flex;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px;gap:4px;">
+        <button data-bill="mensual" onClick="{{ setMensual }}" style="border:0;cursor:pointer;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;padding:10px 22px;border-radius:999px;background:#C9930A;color:#0A1628;transition:background .2s,color .2s;">Mensual</button>
+        <button data-bill="anual" onClick="{{ setAnual }}" style="border:0;cursor:pointer;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;padding:10px 22px;border-radius:999px;background:transparent;color:#A0AEC0;transition:background .2s,color .2s;display:inline-flex;align-items:center;gap:8px;">Anual <span style="font-size:10.5px;font-weight:700;background:rgba(123,211,137,.16);color:#9FE0AB;padding:2px 8px;border-radius:999px;">2 meses gratis</span></button>
+      </div>
+    </div>
+
+    <div data-plan-grid="" style="display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:stretch;max-width:980px;margin:0 auto;">
+
+      <!-- main plan -->
+      <div style="position:relative;background:linear-gradient(165deg,rgba(201,147,10,.16),rgba(15,30,51,.94) 55%);border:1.5px solid rgba(201,147,10,.6);border-radius:24px;padding:clamp(28px,3.4vw,40px);box-shadow:0 0 0 1px rgba(201,147,10,.12),0 26px 60px rgba(201,147,10,.16);">
+        <span style="position:absolute;top:22px;right:24px;background:linear-gradient(135deg,#E8B53A,#C9930A);color:#0A1628;font-family:'Sora',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;">Más popular</span>
+        <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:#E6C77A;margin-bottom:10px;">Membresía ClowUp</div>
+        <div style="display:flex;align-items:flex-end;gap:8px;margin-bottom:6px;">
+          <span style="font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(40px,5.5vw,58px);line-height:1;letter-spacing:-.02em;">{{ priceMain }}</span>
+          <span style="font-size:16px;color:#A0AEC0;font-weight:600;margin-bottom:8px;">{{ priceUnit }}</span>
+        </div>
+        <div style="font-size:13.5px;color:#9FE0AB;font-weight:600;min-height:20px;margin-bottom:22px;">{{ priceNote }}</div>
+
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2.2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M8.3 12.2l2.5 2.5 4.8-5"></path></svg><span style="font-size:15px;line-height:1.5;color:#E8EDF4;">Acceso a <b>todos los sorteos mensuales</b> automáticamente</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2.2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M8.3 12.2l2.5 2.5 4.8-5"></path></svg><span style="font-size:15px;line-height:1.5;color:#E8EDF4;">Tickets asignados sin trámites, mes a mes</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2.2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M8.3 12.2l2.5 2.5 4.8-5"></path></svg><span style="font-size:15px;line-height:1.5;color:#E8EDF4;">Descuentos con marcas y comercios aliados</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2.2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M8.3 12.2l2.5 2.5 4.8-5"></path></svg><span style="font-size:15px;line-height:1.5;color:#E8EDF4;">Posibilidad de comprar tickets adicionales</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2.2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M8.3 12.2l2.5 2.5 4.8-5"></path></svg><span style="font-size:15px;line-height:1.5;color:#E8EDF4;">Comunidad exclusiva y soporte por WhatsApp</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="2.2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M8.3 12.2l2.5 2.5 4.8-5"></path></svg><span style="font-size:15px;line-height:1.5;color:#E8EDF4;">Sorteos auditados con RNG verificable</span></div>
+        </div>
+
+        <a href="#" style="display:block;text-align:center;background:linear-gradient(135deg,#E8B53A,#C9930A);color:#0A1628;font-family:'Sora',sans-serif;font-weight:800;font-size:17px;padding:17px;border-radius:13px;box-shadow:0 14px 36px rgba(201,147,10,.4);transition:transform .2s,filter .2s;" style-hover="transform:translateY(-2px);filter:brightness(1.08);">Quiero ser miembro</a>
+        <div style="text-align:center;font-size:12.5px;color:#7C8BA1;margin-top:13px;">Sin permanencia · cancela cuando quieras</div>
+      </div>
+
+      <!-- side: tickets adicionales -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:26px;">
+          <div style="width:46px;height:46px;border-radius:12px;background:rgba(43,142,240,.12);border:1px solid rgba(43,142,240,.3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B8EF0" stroke-width="2"><polygon points="12,3 21,12 12,21 3,12"></polygon></svg></div>
+          <h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;">Tickets adicionales</h3>
+          <p style="font-size:14px;line-height:1.6;color:#A0AEC0;margin:0 0 14px;">¿Quieres más chances en un sorteo específico? Súmale tickets extra desde el detalle de cada sorteo.</p>
+          <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:24px;color:#E6C77A;">$4.990 <span style="font-size:13px;color:#7C8BA1;font-weight:600;">/ ticket</span></div>
+        </div>
+        <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:26px;flex:1;">
+          <div style="width:46px;height:46px;border-radius:12px;background:rgba(123,211,137,.1);border:1px solid rgba(123,211,137,.32);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7BD389" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.2l2.4 2.4 4.6-4.8"></path></svg></div>
+          <h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;">Pago 100% seguro</h3>
+          <p style="font-size:14px;line-height:1.6;color:#A0AEC0;margin:0;">Cobro automático mensual con boleta electrónica. Si un pago falla, se pausan los beneficios hasta regularizar.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section style="padding:clamp(40px,5vw,64px) 24px;background:linear-gradient(180deg,#0A1628,#0b1a30);">
+  <div data-cmp="" style="max-width:840px;margin:0 auto;">
+    <h2 style="font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin:0 0 32px;text-align:center;">Miembro vs. visitante</h2>
+    <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;">
+      <div data-cmp-row="" style="display:grid;grid-template-columns:1fr 120px 120px;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+        <span style="font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7C8BA1;">Beneficio</span>
+        <span style="text-align:center;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:#E6C77A;">Miembro</span>
+        <span style="text-align:center;font-size:13px;font-weight:600;color:#7C8BA1;">Visitante</span>
+      </div>
+      <div data-cmp-row="" style="display:grid;grid-template-columns:1fr 120px 120px;align-items:center;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,.05);font-size:14.5px;color:#C9D4E3;">Sorteos mensuales automáticos<span style="text-align:center;color:#7BD389;">✓</span><span style="text-align:center;color:#3C4A60;">—</span></div>
+      <div data-cmp-row="" style="display:grid;grid-template-columns:1fr 120px 120px;align-items:center;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,.05);font-size:14.5px;color:#C9D4E3;">Tickets asignados sin costo<span style="text-align:center;color:#7BD389;">✓</span><span style="text-align:center;color:#3C4A60;">—</span></div>
+      <div data-cmp-row="" style="display:grid;grid-template-columns:1fr 120px 120px;align-items:center;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,.05);font-size:14.5px;color:#C9D4E3;">Comprar tickets adicionales<span style="text-align:center;color:#7BD389;">✓</span><span style="text-align:center;color:#3C4A60;">—</span></div>
+      <div data-cmp-row="" style="display:grid;grid-template-columns:1fr 120px 120px;align-items:center;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,.05);font-size:14.5px;color:#C9D4E3;">Descuentos con marcas aliadas<span style="text-align:center;color:#7BD389;">✓</span><span style="text-align:center;color:#3C4A60;">—</span></div>
+      <div data-cmp-row="" style="display:grid;grid-template-columns:1fr 120px 120px;align-items:center;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,.05);font-size:14.5px;color:#C9D4E3;">Comunidad y soporte WhatsApp<span style="text-align:center;color:#7BD389;">✓</span><span style="text-align:center;color:#3C4A60;">—</span></div>
+      <div data-cmp-row="" style="display:grid;grid-template-columns:1fr 120px 120px;align-items:center;padding:17px 24px;font-size:14.5px;color:#C9D4E3;">Ver ganadores y resultados<span style="text-align:center;color:#7BD389;">✓</span><span style="text-align:center;color:#7BD389;">✓</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:clamp(48px,6vw,80px) 24px;">
+  <div style="max-width:760px;margin:0 auto;">
+    <h2 style="font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin:0 0 32px;text-align:center;">Preguntas frecuentes</h2>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+        <button data-faq="0" onClick="{{ toggle0 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;text-align:left;padding:20px 24px;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:16.5px;">¿Cómo funciona el cobro de la membresía?<span data-faqic="0" style="flex-shrink:0;color:#C9930A;font-size:22px;transition:transform .25s;">+</span></button>
+        <div data-faqa="0" style="display:none;padding:0 24px 22px;font-size:15px;line-height:1.65;color:#A0AEC0;">Es un cobro mensual automático a tu tarjeta. Mientras tu pago esté al día, quedas habilitado para todos los sorteos del mes y recibes tu boleta electrónica por correo.</div>
+      </div>
+
+      <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+        <button data-faq="1" onClick="{{ toggle1 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;text-align:left;padding:20px 24px;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:16.5px;">¿Puedo cancelar cuando quiera?<span data-faqic="1" style="flex-shrink:0;color:#C9930A;font-size:22px;transition:transform .25s;">+</span></button>
+        <div data-faqa="1" style="display:none;padding:0 24px 22px;font-size:15px;line-height:1.65;color:#A0AEC0;">Sí. No hay permanencia. Puedes cancelar en cualquier momento desde tu cuenta y mantendrás los beneficios hasta el final del período ya pagado.</div>
+      </div>
+
+      <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+        <button data-faq="2" onClick="{{ toggle2 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;text-align:left;padding:20px 24px;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:16.5px;">¿Qué pasa si un pago falla?<span data-faqic="2" style="flex-shrink:0;color:#C9930A;font-size:22px;transition:transform .25s;">+</span></button>
+        <div data-faqa="2" style="display:none;padding:0 24px 22px;font-size:15px;line-height:1.65;color:#A0AEC0;">Si el cobro rebota, se suspenden temporalmente tus beneficios y tickets hasta que regularices el pago. Apenas se confirma, vuelves a quedar habilitado.</div>
+      </div>
+
+      <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+        <button data-faq="3" onClick="{{ toggle3 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;text-align:left;padding:20px 24px;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:16.5px;">¿Cómo se elige al ganador?<span data-faqic="3" style="flex-shrink:0;color:#C9930A;font-size:22px;transition:transform .25s;">+</span></button>
+        <div data-faqa="3" style="display:none;padding:0 24px 22px;font-size:15px;line-height:1.65;color:#A0AEC0;">Con un sistema de selección aleatoria (RNG) auditado y verificable. El sorteo se realiza en transmisión en vivo para que todos puedan ver el proceso.</div>
+      </div>
+
+      <div style="background:#0F1E33;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+        <button data-faq="4" onClick="{{ toggle4 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;text-align:left;padding:20px 24px;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:16.5px;">¿Quién puede participar?<span data-faqic="4" style="flex-shrink:0;color:#C9930A;font-size:22px;transition:transform .25s;">+</span></button>
+        <div data-faqa="4" style="display:none;padding:0 24px 22px;font-size:15px;line-height:1.65;color:#A0AEC0;">Personas mayores de 18 años con su identidad verificada en el registro. Pedimos RUT/DNI y un documento de identidad para validar la mayoría de edad.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<dc-import name="ClowUpCta" eyebrow="Cupos limitados este mes" title="Activa tu membresía hoy" subtitle="Un solo plan, todo incluido. Empieza a participar en el próximo sorteo." ctaLabel="Quiero ser miembro" hint-size="100%,560px"></dc-import>
+<dc-import name="ClowUpFooter" hint-size="100%,420px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1280, &quot;height&quot;: 720 },
+  &quot;monthlyPrice&quot;: { &quot;editor&quot;: &quot;int&quot;, &quot;default&quot;: 9990, &quot;min&quot;: 990, &quot;max&quot;: 99990, &quot;step&quot;: 1000, &quot;tsType&quot;: &quot;number&quot; }
+}">
+class Component extends DCLogic {
+  state = { billing: 'mensual', openFaq: 0 };
+
+  componentDidMount() { this.applyBilling(); this.applyFaq(); }
+  componentDidUpdate() { this.applyBilling(); this.applyFaq(); }
+
+  applyBilling() {
+    document.querySelectorAll('[data-bill]').forEach((b) => {
+      const on = b.getAttribute('data-bill') === this.state.billing;
+      b.style.background = on ? '#C9930A' : 'transparent';
+      b.style.color = on ? '#0A1628' : '#A0AEC0';
+    });
+  }
+
+  applyFaq() {
+    document.querySelectorAll('[data-faqa]').forEach((a) => {
+      a.style.display = a.getAttribute('data-faqa') === String(this.state.openFaq) ? 'block' : 'none';
+    });
+    document.querySelectorAll('[data-faqic]').forEach((ic) => {
+      const on = ic.getAttribute('data-faqic') === String(this.state.openFaq);
+      ic.style.transform = on ? 'rotate(45deg)' : 'rotate(0deg)';
+    });
+  }
+
+  fmt(n) { return '$' + n.toLocaleString('es-CL'); }
+
+  renderVals() {
+    const monthly = this.props.monthlyPrice ?? 9990;
+    const annualTotal = monthly * 10; // 2 meses gratis
+    const perMonth = Math.round(annualTotal / 12);
+    const isAnnual = this.state.billing === 'anual';
+    const setFaq = (i) => () => this.setState((s) => ({ openFaq: s.openFaq === i ? -1 : i }));
+    return {
+      priceMain: isAnnual ? this.fmt(annualTotal) : this.fmt(monthly),
+      priceUnit: isAnnual ? '/ año' : '/ mes',
+      priceNote: isAnnual ? ('Equivale a ' + this.fmt(perMonth) + '/mes · ahorras 2 meses') : 'Facturación mensual, sin permanencia',
+      setMensual: () => this.setState({ billing: 'mensual' }),
+      setAnual: () => this.setState({ billing: 'anual' }),
+      toggle0: setFaq(0), toggle1: setFaq(1), toggle2: setFaq(2), toggle3: setFaq(3), toggle4: setFaq(4),
+    };
+  }
+}
+</script>
+</body>
+</html>
